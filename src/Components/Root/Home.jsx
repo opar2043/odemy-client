@@ -5,7 +5,7 @@ import Card from '../Card/Card'
 
 const Home = () => {
   return (
-    <div>
+    <div className='md:w-11/12 mx-auto'>
         <Banner></Banner>
         <Learner></Learner>
         <Card></Card>
