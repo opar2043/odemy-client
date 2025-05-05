@@ -6,7 +6,7 @@ import Review from '../review/Review'
 
 const Home = () => {
   return (
-    <div className='md:w-11/12 mx-auto'>
+    <div className='md:w-10/12 w-11/12 mx-auto'>
         <Banner></Banner>
         <Learner></Learner>
         <Card></Card>

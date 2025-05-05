@@ -4,14 +4,17 @@ const Footer = () => {
   return (
     <div className='bg-slate-950 text-white pb-4 md:pb-10'>
         <footer className="footer w-full md:w-10/12 mx-auto border-b  grid grid-cols-1 md:grid-cols-3 p-10">
-  <nav>
-    <h6 className="footer-title">Services</h6>
-    <a className="link link-hover">Branding</a>
-    <a className="link link-hover">Design</a>
-    <a className="link link-hover">Marketing</a>
-    <a className="link link-hover">Advertisement</a>
+  <nav className=''>
+     <div className='flex gap-3 items-center mb-3'>
+     <img src="/Odemy.png" className='w-9 h-9 rounded-full' />
+     <h6 className="text-2xl font-bold items-center">Odemy</h6>
+     </div>
+     <a className="link link-hover">
+     Our Learning Management System (LMS) is a modern, user-friendly platform designed to make online education engaging, efficient, and accessible.
+     </a>
+
   </nav>
-  <nav>
+  <nav className='md:ml-10'>
     <h6 className="footer-title">Company</h6>
     <a className="link link-hover">About us</a>
     <a className="link link-hover">Contact</a>

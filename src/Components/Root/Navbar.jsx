@@ -1,11 +1,14 @@
 import React from "react";
 import { PiNavigationArrowFill } from "react-icons/pi";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const link = (
     <>
       <li className="border-r">
-        <a>Add Course</a>
+       <NavLink to={'/dashboard/add'}>
+       <a>Add Course</a>
+       </NavLink>
       </li>
       <li className="border-r">
         <a>Create Course</a>
@@ -17,9 +20,10 @@ const Navbar = () => {
   );
   return (
     <div>
-      <div className="navbar bg-base-100 border-b">
-        <div className="flex-1">
-          <a className="btn btn-ghost text-xl">Odemy</a>
+      <div className="navbar bg-base-100 border-b flex justify-between px-3 md:px-7">
+        <div className="flex items-center gap-2">
+        <img src="/Odemy.png" className='w-9 h-9 rounded-full' />
+        <h2 className="text-2xl font-bold text-blue-700 ">Odemy</h2>
         </div>
 
         {/* Window */}

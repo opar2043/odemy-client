@@ -1,5 +1,6 @@
 import React from "react";
 import { CiSearch } from "react-icons/ci";
+import Search from "../Shared/Search";
 
 const Banner = () => {
   return (
@@ -18,18 +19,9 @@ const Banner = () => {
               professional goals
             </p>
 
-            <div className="my-6 mt-10 flex flex-row justify-between items-center gap-4 p-2 border rounded-xl shadow-md bg-white w-full md:w-2/3 mx-auto">
-              <div className="w-full flex items-center pl-2 ">
-                <CiSearch />
-                <input
-                  type="text"
-                  id="text"
-                  placeholder="Search for Course"
-                  className="w-full rounded-lg  px-4 py-2 outline-0 shadow-sm text-sm"
-                />
-              </div>
-              <button className="btn btn-primary"> Search </button>
-            </div>
+           <div className="mt-11">
+           <Search></Search>
+           </div>
           </div>
         </div>
       </section>
