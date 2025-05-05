@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CourseCard from './courseCard';
 import { NavLink } from 'react-router-dom';
+import Title from '../Shared/Title'
 
 const Card = () => {
     const [course , setCourse ] = useState([]);
@@ -13,9 +14,8 @@ const Card = () => {
     },[])
   return (
     <div className='my-10 md:my-16'>
-        <h2 className='text-slate-900 text-xl md:text-4xl text-center font-semibold my-6'>Learn From The Best</h2>
-        <p className='text-gray-700 md:w-7/12 mx-auto mb-10 text-center'>Discover our top-rated courses across various categories. From coding and design to business and wellness, our courses are crafted to deliver results.</p>
 
+             <Title head={'Learining From The Best'} para={'Discover our top-rated courses across various categories. From coding and design to business and wellness, our courses are crafted to deliver results'}></Title>
 
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
             {

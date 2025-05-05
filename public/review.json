@@ -1,0 +1,38 @@
+[
+    {
+      "image": "https://randomuser.me/api/portraits/men/45.jpg",
+      "name": "John Doe",
+      "review": "This LMS platform made it super easy to track course progress and engage with interactive content. Highly recommend!",
+      "rating": 5,
+      "position": "Frontend Developer"
+    },
+    {
+      "image": "https://randomuser.me/api/portraits/women/32.jpg",
+      "name": "Ayesha Khan",
+      "review": "Clean UI, fast loading times, and very intuitive. As a designer, I appreciate the attention to user experience.",
+      "rating": 4,
+      "position": "UI/UX Designer"
+    },
+    {
+      "image": "https://randomuser.me/api/portraits/men/60.jpg",
+      "name": "Carlos Mendoza",
+      "review": "The LMS has all the features my team needs for training and onboarding. A bit more customization would be nice.",
+      "rating": 4,
+      "position": "Backend Developer"
+    },
+    {
+      "image": "https://randomuser.me/api/portraits/women/50.jpg",
+      "name": "Sophia Lee",
+      "review": "Great platform for both instructors and students. Uploading materials is fast and feedback tools are helpful.",
+      "rating": 5,
+      "position": "Product Designer"
+    },
+    {
+      "image": "https://randomuser.me/api/portraits/men/78.jpg",
+      "name": "Liam Smith",
+      "review": "Solid LMS. Easy integration with our tools and excellent customer support. Some bugs on mobile though.",
+      "rating": 4,
+      "position": "Full Stack Developer"
+    }
+  ]
+  
