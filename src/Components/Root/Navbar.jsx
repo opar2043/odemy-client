@@ -10,22 +10,27 @@ const Navbar = () => {
 
   const link = (
     <>
-      <li className="border-r">
-        <NavLink to={"/dashboard/add"}>
-          <a>Add Course</a>
-        </NavLink>
-      </li>
-      <li className="border-r">
-        <a>Create Course</a>
-      </li>
       {user ? (
-        <UserButton>
-          <SignedOut></SignedOut>
-        </UserButton>
+        <div className="flex gap-2">
+          <li className="border-r">
+            <NavLink to={"/dashboard/add"}>
+              <a>Add Course</a>
+            </NavLink>
+          </li>
+          <li className="border-r">
+            <a>Create Course</a>
+          </li>
+
+          <UserButton>
+            <SignedOut></SignedOut>
+          </UserButton>
+        </div>
       ) : (
-        <li>
+        <li className="rounded-full">
           <Link to={"/login"}>
-            <button className="btn btn-primary  rounded-full">Log In</button>
+            <button className="btn btn-primary px-9 rounded-full">
+              Log In
+            </button>
           </Link>
         </li>
       )}
@@ -43,7 +48,9 @@ const Navbar = () => {
 
         <div className="hidden md:flex">
           <div className=" flex-none   ">
-            <ul className="menu flex items-center menu-horizontal px-1 gap-2">{link}</ul>
+            <ul className="menu flex items-center menu-horizontal px-1 gap-2">
+              {link}
+            </ul>
           </div>
         </div>
 

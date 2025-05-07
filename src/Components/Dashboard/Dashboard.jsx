@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import { FaTachometerAlt, FaPlusCircle, FaBookOpen, FaUsers, FaHome } from 'react-icons/fa';
+import DashFooter from '../Root/DashFooter';
 
 const Dashboard = () => {
   return (
+    <div className="">
     <div className="flex flex-col md:flex-row min-h-screen bg-gray-100 ">
       {/* Sidebar */}
       <aside className="md:w-64 w-full md:h-screen bg-white border-r border-gray-200 p-6">
@@ -48,6 +50,8 @@ const Dashboard = () => {
 
       {/* Main Content */}
       <main className="flex-1 p-8"><Outlet></Outlet></main>
+    </div>
+    <DashFooter></DashFooter>
     </div>
   );
 };
