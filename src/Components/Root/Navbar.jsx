@@ -1,36 +1,49 @@
+import { useUser, SignedOut, UserButton } from "@clerk/clerk-react";
 import React from "react";
 import { PiNavigationArrowFill } from "react-icons/pi";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import Loading from "../Shared/Loading";
 
 const Navbar = () => {
+  const { user, isLoaded, isSignedIn } = useUser();
+  const navigate = useNavigate();
+
   const link = (
     <>
       <li className="border-r">
-       <NavLink to={'/dashboard/add'}>
-       <a>Add Course</a>
-       </NavLink>
+        <NavLink to={"/dashboard/add"}>
+          <a>Add Course</a>
+        </NavLink>
       </li>
       <li className="border-r">
         <a>Create Course</a>
       </li>
-      <li>
-        <button className="btn btn-primary  rounded-full">Log In</button>
-      </li>
+      {user ? (
+        <UserButton>
+          <SignedOut></SignedOut>
+        </UserButton>
+      ) : (
+        <li>
+          <Link to={"/login"}>
+            <button className="btn btn-primary  rounded-full">Log In</button>
+          </Link>
+        </li>
+      )}
     </>
   );
   return (
     <div>
       <div className="navbar bg-base-100 border-b flex justify-between px-3 md:px-7">
         <div className="flex items-center gap-2">
-        <img src="/Odemy.png" className='w-9 h-9 rounded-full' />
-        <h2 className="text-2xl font-bold text-blue-700 ">Odemy</h2>
+          <img src="/Odemy.png" className="w-9 h-9 rounded-full" />
+          <h2 className="text-2xl font-bold text-blue-700 ">Odemy</h2>
         </div>
 
         {/* Window */}
 
         <div className="hidden md:flex">
           <div className=" flex-none   ">
-            <ul className="menu menu-horizontal px-1 gap-2">{link}</ul>
+            <ul className="menu flex items-center menu-horizontal px-1 gap-2">{link}</ul>
           </div>
         </div>
 

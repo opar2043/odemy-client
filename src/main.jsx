@@ -13,6 +13,8 @@ import AddCourse from "./Components/Dashboard/AddCourse/AddCourse.jsx";
 import Enroll from "./Components/Dashboard/Enroll/Enroll.jsx";
 import MyCourse from "./Components/Dashboard/MyCourse/MyCourse.jsx";
 import DashMain from "./Components/Dashboard/DashMain.jsx";
+import { ClerkProvider, SignIn, SignUp } from "@clerk/clerk-react";
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 const router = createBrowserRouter([
   {
@@ -25,36 +27,46 @@ const router = createBrowserRouter([
       },
       {
         path: "/allcard",
-        element: <AllCard></AllCard>
-      }
+        element: <AllCard></AllCard>,
+      },
+      {
+        path: "/login",
+        element: <div className="flex justify-center p-4"><SignIn></SignIn></div>
+      },
+      {
+        path: "/register",
+        element: <SignUp ></SignUp>
+      },
     ],
   },
   {
-    path: '/dashboard',
+    path: "/dashboard",
     element: <Dashboard></Dashboard>,
     children: [
       {
-      path: '/dashboard',
-      element: <DashMain></DashMain>
-     },
+        path: "/dashboard",
+        element: <DashMain></DashMain>,
+      },
       {
-      path: '/dashboard/add',
-      element: <AddCourse></AddCourse>
-     },
+        path: "/dashboard/add",
+        element: <AddCourse></AddCourse>,
+      },
       {
-      path: '/dashboard/enroll',
-      element: <Enroll></Enroll>
-     },
+        path: "/dashboard/enroll",
+        element: <Enroll></Enroll>,
+      },
       {
-      path: '/dashboard/mycourse',
-      element: <MyCourse></MyCourse>
-     },
-  ]
-  }
+        path: "/dashboard/mycourse",
+        element: <MyCourse></MyCourse>,
+      },
+    ],
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+      <RouterProvider router={router}></RouterProvider>
+    </ClerkProvider>
   </StrictMode>
 );
