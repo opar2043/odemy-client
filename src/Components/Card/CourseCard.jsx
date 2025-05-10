@@ -21,11 +21,12 @@ const CourseCard = ({ cor }) => {
   } = cor;
 
   return (
-    <NavLink to={`/card/${id}`} >
+    <NavLink to={`/view/${id}`} >
       <div className="card card-compact bg-base-100 shadow-xl border-2">
         <figure>
           <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            src={image}
+            className="h-[140px] w-full bg-cover"
             alt="Shoes"
           />
         </figure>

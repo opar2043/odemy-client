@@ -3,11 +3,13 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useUser } from "@clerk/clerk-react";
 import Loading from "../Shared/Loading";
+import { Toaster } from "react-hot-toast";
 const Root = () => {
   const { isLoaded, isSignedIn, user } = useUser();
 
   return (
     <div>
+       <Toaster position="top-center" reverseOrder={false} />
       {!isLoaded ? (
         <p>
           <Loading></Loading>

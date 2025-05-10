@@ -30,6 +30,10 @@ const router = createBrowserRouter([
         element: <AllCard></AllCard>,
       },
       {
+        path: "/view/:id",
+        element: <AllCard></AllCard>,
+      },
+      {
         path: "/login",
         element: <div className="flex justify-center p-4"><SignIn></SignIn></div>
       },

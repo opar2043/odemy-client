@@ -10,8 +10,9 @@
       "discount": "15% off",
       "duration": "57 hours",
       "lessons": 4,
-      "image": "/images/ademy.jpg",
-      "tagline": "Deep Dive into Python Programming"
+      "image": "https://i.ibb.co.com/m5LxjR34/web.webp",
+      "tagline": "Deep Dive into Python Programming",
+      "email": "rijoanrashid2043672@gmail.com"
     },
     {
       "id": 2,
@@ -24,8 +25,9 @@
       "discount": "33% off",
       "duration": "60 hours",
       "lessons": 6,
-      "image": "/images/ademy.jpg",
-      "tagline": "Build modern web apps from scratch"
+      "image": "https://i.ibb.co.com/HWgrRpV/seo.jpg",
+      "tagline": "Build modern web apps from scratch",
+      "email": "rijoanrashid2043672@gmail.com"
     },
     {
       "id": 3,
@@ -38,8 +40,9 @@
       "discount": "26% off",
       "duration": "45 hours",
       "lessons": 5,
-      "image": "/images/ademy.jpg",
-      "tagline": "Become a JavaScript expert"
+      "image": "https://i.ibb.co.com/m5LxjR34/web.webp",
+      "tagline": "Become a JavaScript expert",
+      "email": "rijoanrashid2043672@gmail.com"
     },
     {
       "id": 4,
@@ -52,8 +55,9 @@
       "discount": "28% off",
       "duration": "30 hours",
       "lessons": 4,
-      "image": "/images/ademy.jpg",
-      "tagline": "Start building React apps today"
+      "image": "https://i.ibb.co.com/SwYz9Hww/e-shoping.jpg",
+      "tagline": "Start building React apps today",
+      "email": "rijoanrashid2043672@gmail.com"
     },
     {
       "id": 5,
@@ -66,8 +70,9 @@
       "discount": "24% off",
       "duration": "52 hours",
       "lessons": 5,
-      "image": "/images/ademy.jpg",
-      "tagline": "Master data analysis and ML tools"
+      "image": "https://i.ibb.co.com/39RwMkdb/digital2.webp",
+      "tagline": "Master data analysis and ML tools",
+      "email": "rijoanrashid2043672@gmail.com"
     },
     {
       "id": 6,
@@ -80,8 +85,9 @@
       "discount": "25% off",
       "duration": "40 hours",
       "lessons": 4,
-      "image": "/images/ademy.jpg",
-      "tagline": "Build scalable backend APIs"
+      "image": "https://i.ibb.co.com/8gNLD8Wm/idea.jpg",
+      "tagline": "Build scalable backend APIs",
+      "email": "rijoanrashid2043672@gmail.com"
     },
     {
       "id": 7,
@@ -94,8 +100,9 @@
       "discount": "30% off",
       "duration": "25 hours",
       "lessons": 3,
-      "image": "/images/ademy.jpg",
-      "tagline": "Design better user experiences"
+      "image": "https://i.ibb.co.com/3HBbWYh/green.jpg",
+      "tagline": "Design better user experiences",
+      "email": "rijoanrashid@gmail.com"
     },
     {
       "id": 8,
@@ -108,8 +115,9 @@
       "discount": "21% off",
       "duration": "65 hours",
       "lessons": 6,
-      "image": "/images/ademy.jpg",
-      "tagline": "Hands-on ML training for real projects"
+      "image": "https://i.ibb.co.com/SwYz9Hww/e-shoping.jpg",
+      "tagline": "Hands-on ML training for real projects",
+      "email": "rijoanrashid@gmail.com"
     }
   ]
   

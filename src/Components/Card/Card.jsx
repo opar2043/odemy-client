@@ -2,16 +2,19 @@ import React, { useEffect, useState } from 'react'
 import CourseCard from './courseCard';
 import { NavLink } from 'react-router-dom';
 import Title from '../Shared/Title'
+import useCourse from '../Hooks/useCourse';
 
 const Card = () => {
-    const [course , setCourse ] = useState([]);
-    useEffect(()=>{
-        fetch('/card.json')
-        .then(data => data.json())
-        .then(res => {
-            setCourse(res)
-        })
-    },[])
+    // const [course , setCourse ] = useState([]);
+    // useEffect(()=>{
+    //     fetch('/card.json')
+    //     .then(data => data.json())
+    //     .then(res => {
+    //         setCourse(res)
+    //     })
+    // },[])
+
+    const [course] = useCourse([]);
   return (
     <div className='my-10 md:my-16'>
 

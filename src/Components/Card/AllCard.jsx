@@ -4,16 +4,19 @@ import { NavLink } from "react-router-dom";
 import CourseCard from "./courseCard";
 import { FaArrowRight } from "react-icons/fa";
 import Search from "../Shared/Search";
+import useCourse from "../Hooks/useCourse";
 
 const AllCard = () => {
-  const [course, setCourse] = useState([]);
-  useEffect(() => {
-    fetch("/card.json")
-      .then((data) => data.json())
-      .then((res) => {
-        setCourse(res);
-      });
-  }, []);
+  // const [course, setCourse] = useState([]);
+  // useEffect(() => {
+  //   fetch("/card.json")
+  //     .then((data) => data.json())
+  //     .then((res) => {
+  //       setCourse(res);
+  //     });
+  // }, []);
+
+  const [course] = useCourse([])
   return (
     <div className="my-6 md:my-14 w-11/12 mx-auto">
       <div className=" flex flex-col md:flex-row gap-2 justify-between items-center ">
