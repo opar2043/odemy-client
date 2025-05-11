@@ -14,6 +14,7 @@ import Enroll from "./Components/Dashboard/Enroll/Enroll.jsx";
 import MyCourse from "./Components/Dashboard/MyCourse/MyCourse.jsx";
 import DashMain from "./Components/Dashboard/DashMain.jsx";
 import { ClerkProvider, SignIn, SignUp } from "@clerk/clerk-react";
+import View from "./Components/Card/View.jsx";
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 const router = createBrowserRouter([
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/view/:id",
-        element: <AllCard></AllCard>,
+        element: <View></View>
       },
       {
         path: "/login",

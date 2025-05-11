@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 
 const MyCourse = () => {
 
-  const [course] = useCourse([]);
+   const [course] = useCourse([]);
   
    const email = useEmail();
    const myCourse = course.filter(cor => cor.email == email);
@@ -89,7 +89,7 @@ const MyCourse = () => {
                 {cor.price} $
                 </td>
                 <td className='flex items-center gap-1 '>
-                  <Link to={`/view/${cor._id}`}>
+                  <Link to={`/view/${cor.id}`}>
                   <button className="btn btn-xs">view</button>
                   </Link>
                   <button onClick={()=>handleDelete(cor.id)} className="btn btn-xs text-red-500">
@@ -98,8 +98,7 @@ const MyCourse = () => {
                 </td>
               </tr>
               )
-            }
-              
+            }           
             </tbody>
           </table>
         </div>
@@ -111,38 +110,3 @@ const MyCourse = () => {
 export default MyCourse
 
 
-
-    // const imgFile = {
-    //   image: data.image[0]
-    // }
-    // const imageFile = frm.image.files[0];
-    // const res = axiosSecure.post(img_api_key ,imageFile , {
-    //   headers: {
-    //     'Content-Type' : 'multipart/form-data'
-    //   }
-    // })
-
-    // console.log(res.data);
-
-
-  
-    // const imageFile = frm.image.files[0];
-  
-    // const formData = new FormData();
-    // formData.append("image", imageFile);
-  
-    // axiosSecure.post(img_api_key, formData, {
-    //   headers: {
-    //     "Content-Type": "multipart/form-data"
-    //   }
-    // })
-    // .then(res => {
-    //   const imageUrl = res.data.data.url;
-    //   console.log("Uploaded image URL:", imageUrl);
-  
-    //   // Now you can proceed to send course data
-    // })
-    // .catch(err => {
-    //   console.error("Image upload failed:", err);
-    // });
-    

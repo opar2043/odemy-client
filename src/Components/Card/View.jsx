@@ -1,11 +1,17 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import useCourse from '../Hooks/useCourse';
+import ViewCard from './viewCard';
 
 const View = () => {
     const {id }= useParams();
-    console.log(id);
+    const [course] = useCourse([])
+    const myCourse = course.find(cor => cor.id == id);
+    console.log(myCourse);
   return (
-    <div>View</div>
+    <div>
+      <ViewCard myCourse={myCourse}></ViewCard>
+    </div>
   )
 }
 
