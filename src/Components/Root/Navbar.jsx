@@ -13,11 +13,11 @@ const Navbar = () => {
       {user ? (
         <div className="flex gap-2">
           <li className="border-r">
-            <NavLink to={"/dashboard/add"}>
+            <NavLink to={"/dashboard/add"} className="text-gray-700">
               <a>Add Course</a>
             </NavLink>
           </li>
-          <li className="border-r">
+          <li className="border-r text-gray-700">
             <a>Create Course</a>
           </li>
 

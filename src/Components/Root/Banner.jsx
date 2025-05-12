@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import Search from "../Shared/Search";
+import useCourse from "../Hooks/useCourse";
 
 const Banner = () => {
+  const [course] = useCourse([]);
+  const [search, setSearch] = useState("");
+  const [dbSearch, setDbSearch] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDbSearch(search);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [search]);
+
+  const filterCourse = course.filter((cor) =>
+    cor.title?.toLowerCase().includes(dbSearch.toLowerCase())
+  );
+  
   return (
     <div>
       <section className="bg-white lg:grid lg:h-screen lg:place-content-center">
@@ -19,9 +36,9 @@ const Banner = () => {
               professional goals
             </p>
 
-           <div className="mt-11">
-           <Search></Search>
-           </div>
+            <div className="mt-11">
+              <Search value={search} onChange={setSearch} />
+            </div>
           </div>
         </div>
       </section>
