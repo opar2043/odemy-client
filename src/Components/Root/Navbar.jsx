@@ -25,15 +25,22 @@ const Navbar = () => {
             <SignedOut></SignedOut>
           </UserButton>
         </div>
-      ) : (
-        <li className="rounded-full">
-          <Link to={"/login"}>
-            <button className="btn btn-primary px-9 rounded-full">
+      ) : <>
+        <li className="btn btn-primary px-4 rounded-lg">
+            <button className="btn btn-primary w-full px-9 rounded-lg">
+              People Reaction
+            </button>
+        </li>
+        <li className="">
+          <Link to={"/login"} >
+            <button className="btn btn-primary px-9 rounded-lg">
               Log In
             </button>
           </Link>
+  
         </li>
-      )}
+
+      </>}
     </>
   );
   return (
