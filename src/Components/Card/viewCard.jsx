@@ -6,6 +6,7 @@ import { FaStar, FaRegHeart, FaHeart } from "react-icons/fa";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const ViewCard = ({ myCourse }) => {
   const {
@@ -33,7 +34,7 @@ const ViewCard = ({ myCourse }) => {
     await stripe.redirectToCheckout({ sessionId: data.id });
   } catch (error) {
     console.error("Error redirecting to Stripe:", error);
-    alert("Payment initialization failed.");
+    toast.error('Something Happen Wrong!')
   }
 };
 
@@ -57,6 +58,11 @@ const ViewCard = ({ myCourse }) => {
   }, []);
 
   const formatNumber = (num) => num.toString().padStart(2, "0");
+
+
+  function hotToast(){
+    toast.success("Added To Cart List");
+  }
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -136,7 +142,7 @@ const ViewCard = ({ myCourse }) => {
           <p className="text-xs text-gray-500">Instructor: {email}</p>
           <div className="flex items-center gap-3">
             <button
-              onClick={() => setIsFavorite(!isFavorite)}
+              onClick={() => {setIsFavorite(!isFavorite), hotToast()}}
               className="p-2 rounded-full border border-gray-300 hover:bg-gray-100"
             >
               {isFavorite ? <FaHeart className="text-red-500" /> : <FaRegHeart className="text-gray-600" />}

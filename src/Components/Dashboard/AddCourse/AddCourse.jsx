@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaUpload } from "react-icons/fa";
 import useAxios from "../../Hooks/useAxios";
 import toast from "react-hot-toast";
 import { useUser } from "@clerk/clerk-react";
