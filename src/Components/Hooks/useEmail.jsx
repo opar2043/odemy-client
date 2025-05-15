@@ -5,7 +5,7 @@ const useEmail = () => {
     const {user} = useUser();
     const email = user?.primaryEmailAddress?.emailAddress;
 
-    return email;
+    return {email};
 }
 
 export default useEmail
