@@ -3,12 +3,12 @@ import React from "react";
 import useEmail from "../Hooks/useEmail";
 
 const UserCard = () => {
-  const { user } = useUser();
+  const  {user}  = useUser();
   const { fullName, imageUrl, createdAt, primaryEmailAddress } = user || "";
 
   console.log(user);
 
-  const email = useEmail();
+  const {email} = useEmail();
   return (
     <div className="w-full md:w-[60%] shadow-lg bg-white  border rounded">
       <div className="w-full h-[150px] rounded-t-md relative bg-[url('https://i.ibb.co.com/SD55xt4z/digital.webp')] bg-center">

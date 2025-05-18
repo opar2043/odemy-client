@@ -50,7 +50,7 @@ const AddCourse = () => {
         axiosSecure
           .post("/course", courseObj)
           .then((res) => {
-            console.log(res.data);
+            console.log(res.data , 'data obj');
             toast.success("Course Added");
           })
           .catch((err) => {

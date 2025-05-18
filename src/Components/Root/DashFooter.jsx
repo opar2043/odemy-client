@@ -10,9 +10,14 @@ const DashFooter = () => {
     <p className='text-gray-800 font-semibold'>All Right's Deserves by Odemy © {new Date().getFullYear()} - All right reserved</p>
   </aside>
   <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-      <FaFacebook size={20}></FaFacebook>
-      <FaLinkedin size={20}></FaLinkedin>
+    <a href="https://github.com/opar2043">
       <FaGithub size={20}></FaGithub>
+    </a>
+      <a href="https://www.linkedin.com/in/rijoan-rashid-opar/">
+      <FaLinkedin size={20}>
+      </FaLinkedin>
+      </a>
+
   </nav>
 </footer>
   
