@@ -33,7 +33,7 @@ const Banner = () => {
             <p className="my-6 mt-6 font-semibold  text-pretty text-gray-600 text-sm ">
               We bring together world-class instructors, interactive content,
               and a supportive community to help you achieve your personal and
-              professional goals
+              professional goals to achive it.
             </p>
 
             <div className="mt-11">
