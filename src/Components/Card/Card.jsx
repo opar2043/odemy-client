@@ -27,7 +27,7 @@ const Card = () => {
         </div>
         <div className='flex items-center justify-center my-4 mt-10 '>
             <NavLink to={'/allcard'}>
-            <button className='btn btn-primary shadow-lg'>Show all Course</button>
+            <button className='btn bg-color shadow-lg'>Show all Course</button>
             </NavLink>
         </div>
     </div>

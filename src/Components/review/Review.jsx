@@ -43,21 +43,18 @@ const Review = () => {
       name,
     };
 
-
-
     axiosSecure
       .post("/review", rvw)
       .then((res) => {
         console.log(res.data);
         toast.success("Review  Added");
-      
       })
       .catch((err) => {
         console.error(err);
         toast.error("Something Went Wrong");
       });
 
-      form.reset()
+    form.reset();
   }
 
   return (
@@ -112,13 +109,13 @@ const Review = () => {
         ></Title>
         <div className="flex justify-center items-center gap-4">
           <button
-            className="btn btn-primary"
+            className="btn bg-color"
             onClick={() => document.getElementById("my_modal_3").showModal()}
           >
             Add Review
           </button>
-          <NavLink to={'/learn'}>
-             <button className="btn">Learn More </button>
+          <NavLink to={"/learn"}>
+            <button className="btn text-color">Learn More </button>
           </NavLink>
         </div>
       </div>
