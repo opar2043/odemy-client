@@ -23,7 +23,7 @@ const Root = () => {
         </div>
       )}
       <Link to={"/chatbot"}>
-        <div className="fixed bottom-4 right-4 w-12 h-12 rounded-full bg-gradient-to-br from-red-400 to-red-600 text-white shadow-lg flex items-center justify-center hover:from-violet-600 hover:to-violet-800 transition duration-300">
+        <div className="fixed bottom-4 right-4 w-12 h-12 rounded-full bg-gradient-to-br from-violet-400 to-violet-600 text-white shadow-lg flex items-center justify-center hover:from-violet-600 hover:to-violet-800 transition duration-300">
           <button className="focus:outline-none text-xl">
             <GoCopilot />
           </button>

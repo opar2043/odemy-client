@@ -109,13 +109,13 @@ const Review = () => {
         ></Title>
         <div className="flex justify-center items-center gap-4">
           <button
-            className="btn bg-color"
+            className="btn bg-violet-700 text-white"
             onClick={() => document.getElementById("my_modal_3").showModal()}
           >
             Add Review
           </button>
           <NavLink to={"/learn"}>
-            <button className="btn text-color">Learn More </button>
+            <button className="btn text-violet-700 border border-violet-700">Learn More </button>
           </NavLink>
         </div>
       </div>

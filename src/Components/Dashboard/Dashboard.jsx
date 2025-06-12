@@ -42,7 +42,7 @@ const Dashboard = () => {
             <FaUsers className="text-lg" />
             <span>Student Enrolled</span>
           </Link>
-          <Link to={'/'} className="btn text-left btn-primary w-full text-white">
+          <Link to={'/'} className="btn text-left bg-color w-full text-white">
             <FaHome></FaHome> Back To Home
           </Link>
         </nav>

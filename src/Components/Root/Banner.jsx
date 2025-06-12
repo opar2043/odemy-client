@@ -27,7 +27,7 @@ const Banner = () => {
           <div className="mx-auto w-full md:max-w-4xl text-center">
             <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
               Empower your future with the courses designed to
-              <strong className="text-color"> fit your choice </strong>
+              <strong className="text-violet-600"> fit your choice </strong>
             </h1>
 
             <p className="my-6 mt-6 font-semibold  text-pretty text-gray-600 text-sm ">

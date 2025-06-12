@@ -27,13 +27,13 @@ const Navbar = () => {
         </div>
       ) : <>
         <li className=" px-4 rounded-lg">
-            <button className="btn bg-color w-full px-9 rounded-lg">
+            <button className="btn bg-primary w-full px-9 rounded-lg">
               People Reaction
             </button>
         </li>
         <li className="">
           <Link to={"/login"} >
-            <button className="btn bg-color px-9 rounded-lg">
+            <button className="btn bg-primary px-9 rounded-lg">
               Log In
             </button>
           </Link>
@@ -48,7 +48,7 @@ const Navbar = () => {
       <div className="navbar bg-base-100 border-b flex justify-between px-3 md:px-7">
         <div className="flex items-center gap-2">
           <img src="/Odemy.png" className="w-9 h-9 rounded-full" />
-          <h2 className="text-2xl font-bold text-color ">Odemy</h2>
+          <h2 className="text-2xl font-bold text-violet-700 ">Odemy</h2>
         </div>
 
         {/* Window */}

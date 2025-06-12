@@ -20,7 +20,7 @@ const Search = ({ value, onChange}) => {
             className="w-full rounded-lg  px-4 py-2 outline-0 shadow-sm text-sm"
           />
         </div>
-        <button className="btn bg-color"> Search </button>
+        <button className="btn bg-violet-700 text-white"> Search </button>
       </div>
     </div>
   );
