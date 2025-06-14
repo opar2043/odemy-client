@@ -1,92 +1,83 @@
 import { useUser, SignedOut, UserButton } from "@clerk/clerk-react";
 import React from "react";
+import { FaList } from "react-icons/fa";
 import { PiNavigationArrowFill } from "react-icons/pi";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import Loading from "../Shared/Loading";
 
 const Navbar = () => {
-  const { user, isLoaded, isSignedIn } = useUser();
-  const navigate = useNavigate();
+  const { user, isLoaded } = useUser();
 
   const link = (
     <>
-      {!user ? (
-        <div className="flex gap-2">
-          <li className="border-r">
-            <NavLink to={"/dashboard/add"} className="text-gray-700">
-              <a>Add Course</a>
+      {user ? (
+        <>
+          <li>
+            <NavLink
+              to="/dashboard/add"
+              className="text-black hover:text-white border border-black px-4 py-2 rounded-lg hover:bg-black transition"
+            >
+              Add Course
             </NavLink>
           </li>
-          <li className="border-r text-gray-700">
-            <a>Create Course</a>
+          <li>
+            <button className="text-black hover:text-white border border-black px-4 py-2 rounded-lg hover:bg-black transition">
+              Create Course
+            </button>
           </li>
-
-          <UserButton>
-            <SignedOut></SignedOut>
-          </UserButton>
-        </div>
-      ) : <>
-        <li className=" px-4 rounded-lg">
-            <button className="btn bg-primary w-full px-9 rounded-lg">
+          <li>
+            <UserButton afterSignOutUrl="/" />
+          </li>
+        </>
+      ) : (
+        <>
+          <li>
+            <p className="text-black border border-black px-4 py-2 rounded-lg hover:bg-black hover:text-white transition">
               People Reaction
-            </button>
-        </li>
-        <li className="">
-          <Link to={"/login"} >
-            <button className="btn bg-primary px-9 rounded-lg">
-              Log In
-            </button>
-          </Link>
-  
-        </li>
-
-      </>}
+            </p>
+          </li>
+          <li>
+            <Link to="/login">
+              <button className="text-black border border-black px-4 py-2 rounded-lg hover:bg-black hover:text-white transition">
+                Log In
+              </button>
+            </Link>
+          </li>
+        </>
+      )}
     </>
   );
+
   return (
-    <div>
-      <div className="navbar bg-base-100 border-b flex justify-between px-3 md:px-7">
-        <div className="flex items-center gap-2">
-          <img src="/Odemy.png" className="w-9 h-9 rounded-full" />
-          <h2 className="text-2xl font-bold text-violet-700 ">Odemy</h2>
-        </div>
+    <header className="bg-white shadow-md border-b">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2">
+          <img src="/Odemy.png" className="w-9 h-9 rounded-full" alt="Logo" />
+          <h1 className="text-2xl font-bold text-black">Odemy</h1>
+        </Link>
 
-        {/* Window */}
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex ">
+          <ul className="flex gap-4 items-center">{link}</ul>
+        </nav>
 
-        <div className="hidden md:flex">
-          <div className=" flex-none   ">
-            <ul className="menu flex items-center menu-horizontal px-1 gap-2">
-              {link}
-            </ul>
-          </div>
-        </div>
-
-        {/* Mobile */}
-
-        <div className="drawer md:hidden justify-end">
-          <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-          <div className="drawer-content">
-            {/* Page content here */}
-            <label
-              htmlFor="my-drawer"
-              className="btn text-purple-600 drawer-button"
-            >
-              <PiNavigationArrowFill />
+        {/* Mobile Menu */}
+        <div className="md:hidden drawer z-50 justify-items-end">
+          <input id="mobile-drawer" type="checkbox" className="drawer-toggle" />
+          <div className="drawer-content ">
+            <label htmlFor="mobile-drawer" className="btn btn-sm border border-black text-black hover:bg-black hover:text-white rounded-lg ">
+              <FaList size={20} />
             </label>
           </div>
           <div className="drawer-side">
-            <label
-              htmlFor="my-drawer"
-              aria-label="close sidebar"
-              className="drawer-overlay"
-            ></label>
-            <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+            <label htmlFor="mobile-drawer" className="drawer-overlay"></label>
+            <ul className="menu p-4 w-64 min-h-full bg-white text-black space-y-3">
               {link}
             </ul>
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

@@ -19,7 +19,7 @@ const Review = () => {
   console.log(user);
 
   useEffect(() => {
-    fetch("/review.json")
+    fetch("https://odemy-server.vercel.app/review")
       .then((res) => res.json())
       .then((data) => {
         setReview(data);

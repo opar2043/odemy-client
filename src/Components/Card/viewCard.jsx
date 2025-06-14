@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { IoBookmarkOutline } from "react-icons/io5";
 import { GoShareAndroid } from "react-icons/go";
-import { FaStar, FaRegHeart, FaHeart } from "react-icons/fa";
+import { FaStar, FaRegHeart, FaHeart, FaHome } from "react-icons/fa";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useUser } from "@clerk/clerk-react";
+import { Link } from "react-router-dom";
 
 const ViewCard = ({ myCourse }) => {
   const {
@@ -107,7 +108,8 @@ const ViewCard = ({ myCourse }) => {
       <div className="space-y-4">
         <div className="relative aspect-video rounded-xl overflow-hidden shadow-md">
           <img
-            src={images[currentImageIndex]}
+            // src={images[currentImageIndex]}
+            src={image}
             alt="Course"
             className="object-cover w-full h-full"
           />
@@ -220,9 +222,11 @@ const ViewCard = ({ myCourse }) => {
             <button className="p-2 rounded-full border border-gray-300 hover:bg-gray-100">
               <IoBookmarkOutline />
             </button>
-            <button className="p-2 rounded-full border border-gray-300 hover:bg-gray-100">
-              <GoShareAndroid />
+            <Link to={'/'}>
+             <button className="p-2 rounded-full border border-gray-300 hover:bg-gray-100">
+              <FaHome></FaHome>
             </button>
+            </Link>
           </div>
         </div>
 

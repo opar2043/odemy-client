@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 const useCourse = () => {
   const [course, setCourse] = useState([]);
   useEffect(() => {
-    fetch("/card.json")
+    fetch("https://odemy-server.vercel.app/course")
       .then((data) => data.json())
       .then((res) => {
         setCourse(res);

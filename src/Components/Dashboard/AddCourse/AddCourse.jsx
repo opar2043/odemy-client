@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import useAxios from "../../Hooks/useAxios";
 import toast from "react-hot-toast";
 import { useUser } from "@clerk/clerk-react";
+import Swal from "sweetalert2";
 
 const img_hosting = import.meta.env.VITE_IMG;
 const img_api_key = `https://api.imgbb.com/1/upload?key=${img_hosting}`;
@@ -50,14 +51,24 @@ const AddCourse = () => {
         axiosSecure
           .post("/course", courseObj)
           .then((res) => {
-            console.log(res.data , 'data obj');
-            toast.success("Course Added");
+            Swal.fire({
+              title: "Added Course",
+              icon: "success",
+              draggable: true,
+            });
           })
           .catch((err) => {
             console.error(err);
-            toast.error("Failed to add course");
+            Swal.fire({
+              title: "Eroor",
+              icon: "error",
+              draggable: true,
+            });
           });
       });
+
+
+      frm.reset()
   }
 
   return (

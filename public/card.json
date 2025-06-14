@@ -1,6 +1,6 @@
 [
     {
-      "id": 1,
+      
       "title": "Advanced Python Programming",
       "instructor": "GreatStack",
       "rating": 4,
@@ -15,7 +15,7 @@
       "email": "rijoanrashid2043672@gmail.com"
     },
     {
-      "id": 2,
+
       "title": "Full-Stack Web Development",
       "instructor": "CodePro",
       "rating": 5,
@@ -30,7 +30,7 @@
       "email": "rijoanrashid2043672@gmail.com"
     },
     {
-      "id": 3,
+
       "title": "JavaScript Masterclass",
       "instructor": "DevNinja",
       "rating": 4,
@@ -45,7 +45,7 @@
       "email": "rijoanrashid2043672@gmail.com"
     },
     {
-      "id": 4,
+
       "title": "React for Beginners",
       "instructor": "Frontend Masters",
       "rating": 5,
@@ -60,7 +60,7 @@
       "email": "rijoanrashid2043672@gmail.com"
     },
     {
-      "id": 5,
+
       "title": "Data Science with Python",
       "instructor": "Techie Lab",
       "rating":3,
@@ -75,7 +75,7 @@
       "email": "rijoanrashid2043672@gmail.com"
     },
     {
-      "id": 6,
+
       "title": "Backend Development ",
       "instructor": "API Wizards",
       "rating": 5,
@@ -90,7 +90,7 @@
       "email": "rijoanrashid2043672@gmail.com"
     },
     {
-      "id": 7,
+
       "title": "UI/UX Design Fundamentals",
       "instructor": "DesignCraft",
       "rating": 4,
@@ -105,7 +105,7 @@
       "email": "rijoanrashid@gmail.com"
     },
     {
-      "id": 8,
+      
       "title": "Machine Learning Bootcamp",
       "instructor": "ML Prodigy",
       "rating": 4,
@@ -120,4 +120,7 @@
       "email": "rijoanrashid@gmail.com"
     }
   ]
+
+
+
   
