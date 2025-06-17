@@ -46,8 +46,8 @@ const Chatbot = () => {
     e.target.reset();
   }
 
-  console.log(arr);
-  console.log(preQus);
+  // console.log(arr);
+  // console.log(preQus);
 
   return (
     <div className="flex flex-col md:flex-row h-screen bg-white text-black">
@@ -74,7 +74,7 @@ const Chatbot = () => {
                     type="text"
                     onChange={(e) => setQus(e.target.value)}
                     className="bg-transparent text-black border-0 outline-0"
-                    placeholder={qs}
+                    // placeholder={qs}
                   />
                 </li>
               ))}

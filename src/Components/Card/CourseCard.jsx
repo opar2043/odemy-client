@@ -17,11 +17,11 @@ const CourseCard = ({ cor }) => {
     lessons,
     image,
     tagline,
-    id,
+    _id,
   } = cor;
 
   return (
-    <NavLink to={`/view/${id}`} >
+    <NavLink to={`/view/${_id}`} >
       <div className="card card-compact bg-base-100 shadow-xl border-2">
         <figure>
           <img

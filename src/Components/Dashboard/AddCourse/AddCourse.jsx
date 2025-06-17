@@ -15,7 +15,6 @@ const AddCourse = () => {
   function handleSubmit(e) {
     e.preventDefault();
     const frm = e.target;
-
     const title = frm.title.value;
     const description = frm.description.value;
     const discount = frm.discount.value;
@@ -45,7 +44,26 @@ const AddCourse = () => {
           rating,
           email,
           image: data.data.url,
+          instrustor: user.displayName || 'opar'
         };
+
+//         const courseObj = {
+//   title,
+//   description : tagline,
+//   discount,
+//   price: parseFloat(price), // ensure number
+//   originalPrice: parseFloat(originalPrice), // ensure number
+//   benefit,
+//   rating: parseFloat(rating), // ensure number
+//   email,
+//   image: data.data.url,
+//   instructor,
+//   students: parseInt(students),
+//   duration,
+//   lessons: parseInt(lessons),
+  
+// };
+
 
         console.log(courseObj);
         axiosSecure
@@ -66,7 +84,6 @@ const AddCourse = () => {
             });
           });
       });
-
 
       frm.reset()
   }
@@ -168,6 +185,17 @@ const AddCourse = () => {
             />
           </div>
           <div>
+            <label className="block  text-sm font-medium text-gray-700">
+              Duration
+            </label>
+            <input
+              type="text"
+              name="duration"
+              placeholder="Duration in this Course"
+              className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div>
             <label className="block text-sm font-medium text-gray-600">
               Rating
             </label>
@@ -212,3 +240,4 @@ const AddCourse = () => {
 };
 
 export default AddCourse;
+

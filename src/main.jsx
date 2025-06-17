@@ -17,11 +17,13 @@ import { ClerkProvider, SignIn, SignUp } from "@clerk/clerk-react";
 import View from "./Components/Card/View.jsx";
 import Learn from "./Components/review/Learn.jsx";
 import Chatbot from "./Components/Chatbot/Chatbot.jsx";
+import Error from "./Components/Shared/Error.jsx";
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement: <Error></Error>,
     element: <Root></Root>,
     children: [
       {

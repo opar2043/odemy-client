@@ -6,7 +6,7 @@ import ViewCard from './viewCard';
 const View = () => {
     const {id }= useParams();
     const [course] = useCourse([])
-    const myCourse = course.find(cor => cor.id == id);
+    const myCourse = course.find(cor => cor._id == id);
     console.log(myCourse);
   return (
     <div>

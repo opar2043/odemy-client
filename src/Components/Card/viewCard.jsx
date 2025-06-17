@@ -7,20 +7,28 @@ import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useUser } from "@clerk/clerk-react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const ViewCard = ({ myCourse }) => {
+ 
+
   const {
     title = "Course Title",
-    description = "This is a detailed course description with all important highlights of the content.",
+    description ,
+    tagline,
+    instructor,
     discount = 20,
     price = 80,
+    duration,
     originalPrice = 100,
     benefit = ["Lifetime access", "Certificate included", "Beginner friendly"],
     rating = 4,
     email = "instructor@example.com",
     image = "https://via.placeholder.com/600x400",
   } = myCourse || {};
+
+
+  
 
   const { user } = useUser();
 
@@ -48,7 +56,7 @@ const ViewCard = ({ myCourse }) => {
     const stripe = await stripePromise;
 
     axios
-      .post("http://localhost:5001/create-checkout-session", {
+      .post("http://localhost:5173/create-checkout-session", {
         title,
         price,
       })
@@ -72,8 +80,7 @@ const ViewCard = ({ myCourse }) => {
     seconds: 5,
   });
 
-  const images = [image, image, image]; // Replace with real gallery images if available
-
+  const images = [image, image, image]; 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
@@ -163,14 +170,15 @@ const ViewCard = ({ myCourse }) => {
               className={i < rating ? "text-yellow-500" : "text-gray-300"}
             />
           ))}
-          <span className="text-sm text-gray-600">({rating}/5)</span>
+          <span className="text-sm text-gray-600">({parseFloat(rating)}/{rating})</span>
         </div>
 
         <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
-        <p className="text-gray-600 text-sm">{description}</p>
+        <p className="text-gray-600 text-sm">- By {instructor || 'Opar'}</p>
+        <p className="text-gray-600 text-sm">{description || tagline}</p>
 
         <div className="flex items-center gap-3">
-          <span className="text-2xl text-blue-600 font-bold">${price}</span>
+          <span className="text-2xl text-blue-600 font-bold">${parseInt(price)}</span>
           <span className="line-through text-gray-400 text-sm">
             ${originalPrice}
           </span>
@@ -187,6 +195,14 @@ const ViewCard = ({ myCourse }) => {
             {benefit.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
+          </ul>
+        </div>
+        <div className="border-t pt-4 space-y-2">
+          <p className="text-gray-800 font-semibold text-sm">
+            What you'll get:
+          </p>
+          <ul className=" text-sm text-gray-600">
+             {duration || "7"} 
           </ul>
         </div>
 
@@ -232,7 +248,7 @@ const ViewCard = ({ myCourse }) => {
 
         {user ? (
           <button
-            onClick={handleCheckout}
+            onClick={handleCheckout }
             className="w-full bg-blue-600 text-white font-medium py-3 rounded hover:bg-blue-700 transition"
           >
             Pay Now
