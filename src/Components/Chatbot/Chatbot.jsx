@@ -63,9 +63,7 @@ const Chatbot = () => {
           <li className="px-3 py-2 rounded hover:bg-black hover:text-white transition cursor-pointer">
             My Chats
           </li>
-          <li className="px-3 py-2 rounded hover:bg-black hover:text-white transition cursor-pointer">
-            Settings
-          </li>
+
           <div>
             {preQus &&
               preQus.map((qs) => (
