@@ -31,9 +31,20 @@ const Navbar = () => {
       ) : (
         <>
           <li>
-            <p className="text-black border border-black px-4 py-2 rounded-lg hover:bg-black hover:text-white transition">
-              People Reaction
-            </p>
+            <NavLink
+              to="/allcard"
+              className="text-black hover:text-white border border-black px-4 py-2 rounded-lg hover:bg-black transition"
+            >
+              All Course
+            </NavLink>
+          </li>  
+          <li>
+            <NavLink
+              to="/learn"
+              className="text-black hover:text-white border border-black px-4 py-2 rounded-lg hover:bg-black transition"
+            >
+              About
+            </NavLink>
           </li>
           <li>
             <Link to="/login">
@@ -42,6 +53,7 @@ const Navbar = () => {
               </button>
             </Link>
           </li>
+
         </>
       )}
     </>

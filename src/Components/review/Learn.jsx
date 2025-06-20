@@ -1,9 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Learn = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Blog Section */}
+      <div className="flex justify-between">
+        <div></div>
+        <div>
+          <Link to={'/'}>
+             <button className="btn bg-red-500 hover:bg-red-600 text-white px-4 py-1">Back To Home</button>
+          </Link>
+        </div>
+      </div>
       <section className="blog-post max-w-5xl mx-auto">
         <h1 className="text-3xl font-bold text-center mb-4">Learn About Odemy</h1>
         <p className="text-lg text-gray-700 mb-6">
