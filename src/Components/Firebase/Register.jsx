@@ -1,8 +1,8 @@
-
 import { Link, useNavigate } from "react-router-dom";
-import useAuth from "../Hooks/useAuth";
 import Swal from "sweetalert2";
 import useAxios from "../Hooks/useAxios";
+import { useAuth } from "@clerk/clerk-react";
+
 
 const Register = () => {
   const { setUser, handleRegister, updateData } = useAuth();

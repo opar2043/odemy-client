@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { FaEye, FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import useAuth from "../Hooks/useAuth";
 import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 import useAxios from "../Hooks/useAxios";
+import useAuth from "../Hooks/useAuth";
+
 
 const Login = () => {
   const { handleLogin, user, setUser, googleSignin } = useAuth();
@@ -46,14 +47,14 @@ const Login = () => {
       .then((userCredential) => {
         console.log("User created:", userCredential.user);
         setUser(userCredential.user);
-        axiosSecure.post("/users", userCredential.user).then((res) => {
-          Swal.fire({
-            title: "Registered Successfully!",
-            icon: "success",
-            draggable: true,
-          });
+        // axiosSecure.post("/users", userCredential.user).then((res) => {
+          // Swal.fire({
+          //   title: "Registered Successfully!",
+          //   icon: "success",
+          //   draggable: true,
+          // });
           navigate("/");
-        });
+        // });
       })
       .catch((error) => {
         console.error("Error signing up:", error.message);
@@ -169,7 +170,7 @@ const Login = () => {
           </div>
           <div className="mx-auto">
             <button
-              onClick={() => handleGoogle()}
+              onClick={()=>googleSignin()}
               className="text-center btn btn-outline w-full border border-gray-400"
             >
               <FaGoogle></FaGoogle>Google

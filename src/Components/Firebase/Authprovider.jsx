@@ -7,8 +7,10 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
+
 import { createContext, useEffect, useState } from "react";
-import auth from "../Firebase/firebase.config";
+import { auth } from "./firebase.config";
+
 export const AuthContex = createContext();
 
 const AuthProvider = ({ children }) => {

@@ -18,6 +18,9 @@ import View from "./Components/Card/View.jsx";
 import Learn from "./Components/review/Learn.jsx";
 import Chatbot from "./Components/Chatbot/Chatbot.jsx";
 import Error from "./Components/Shared/Error.jsx";
+import Login from "./Components/Firebase/Login.jsx";
+import Register from "./Components/Firebase/register.jsx";
+import AuthProvider from "./Components/Firebase/Authprovider.jsx";
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 const router = createBrowserRouter([
@@ -38,17 +41,25 @@ const router = createBrowserRouter([
         path: "/view/:id",
         element: <View></View>
       },
-      {
-        path: "/login",
-        element: <div className="flex justify-center p-4"><SignIn></SignIn></div>
-      },
-      {
-        path: "/register",
-        element: <SignUp ></SignUp>
-      },
+      // {
+      //   path: "/login",
+      //   element: <div className="flex justify-center p-4"><SignIn></SignIn></div>
+      // },
+      // {
+      //   path: "/register",
+      //   element: <SignUp ></SignUp>
+      // },
       {
         path: "/learn",
         element: <Learn></Learn>
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
       },
     ],
   },
@@ -82,8 +93,11 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <AuthProvider>
     <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
       <RouterProvider router={router}></RouterProvider>
     </ClerkProvider>
+    </AuthProvider>
+
   </StrictMode>
 );
